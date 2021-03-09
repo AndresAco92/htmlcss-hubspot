@@ -13,8 +13,14 @@ body{
 
 /* header */
 
-header,nav,footer{
+header,main,footer{
   width: 100%;
+}
+
+.clearfix::after{
+  content: '';
+  clear: both;
+  display: table;
 }
 
 header{
@@ -37,13 +43,12 @@ header{
   line-height: 20px;
   padding: 15px 10px;
   color: #fff;
+  margin-right: 20px;
   text-decoration: none;
 }
 
-.btn.btn-white{
+.btn.btn-bdo{
   border: 1px solid rgb(254, 119, 90);
-  padding-left: 10px;
-  padding-right: 10px;
   color: rgb(254, 119, 90);
 }
 
@@ -54,6 +59,7 @@ header{
 .btn.btn-large{
   padding: 20px 40px;
 }
+
 /* fine generic-rule */
 section{
   width: 70%;
@@ -76,8 +82,8 @@ section .box{
   width: 100px;
 }
 
-section .pd-in{
-  padding: 0 10px;
+.pd-in{
+  padding: 0 20px;
 }
 
 section .in-a{
@@ -90,12 +96,18 @@ section .nav-s{
   padding: 12px;
 }
 
+/* nav parte destra */
 section .nav-d{
   text-align: right;
 }
 
-/* nav secondario */
+section .nav-d img{
+  height: 30px;
+  padding-right: 20px;
+  vertical-align: middle;
+}
 
+/* nav secondario */
 .sub-nav{
   width: 100%;
   padding-top: 100px;
@@ -108,11 +120,24 @@ section .nav-d{
   margin-top: 15px;
 }
 
+/* parte destra */
 div .nav-d{
   padding-top: 40px;
 }
 
+.nav-d i{
+ padding-left: 10px; 
+}
+
+.nav-d a{
+  text-decoration: none;  
+}
+
 /* main */
+main{
+  height: 4280px;
+}
+
 main .main-box{
   position: relative;
   height: 800px;
@@ -122,6 +147,7 @@ main .main-box{
   background-size: contain;
   background-color: rgb(255, 245, 238);
 }
+
 main .block{
   position: absolute;
   width: 100%;
@@ -131,6 +157,7 @@ main .block{
   bottom: 0;
 }
 
+/* parte sinistra jumbotron */
 .text{
   padding: 100px 0;
 }
@@ -152,14 +179,12 @@ main .block{
 
 main .main-box2{
   width: 100%;
-  height: 1760px;
   background-color: rgb(244, 249, 253);
-  padding-top: 30px;
+  padding: 30px;
 }
 
 main .parte1{ 
   width: 70%;
-  height: 500px;
   margin: auto;
   text-align: center;
   padding: 20px 0;
@@ -179,16 +204,12 @@ main .parte1{
   line-height: 30px;
 }
 
+/* parte seconda */
 main .parte2{
   width: 100%;
-  height: 370px;
   background-color: #fff;
   padding: 70px;
-}
-
-.w-80{
-  width: 90%;
-  margin: auto;
+  box-shadow: 0px 0px 4px rgb(0,0,0,0.2);
 }
 
 .w-30{
@@ -208,7 +229,7 @@ main .parte2{
   display: block;
   height: 140px;
   padding-bottom: 20px;
-  padding-left: 120px;
+  padding-left: 27%;
 }
 
 .pt2-b{
@@ -218,16 +239,19 @@ main .parte2{
 
 .pt2-b h2{
   font-size: 2em;
-  padding-bottom: 30px;
 }
 
 .pt2-b .text-1{
   font-size: 1.3em;
-  padding-bottom: 30px;
 }
 
 .pt2-b h3{
   font-size: 1.5em;
+}
+
+.pt2-b h2,
+.pt2-b .text-1,
+.pt2-b h3{
   padding-bottom: 30px;
 }
 
@@ -244,27 +268,26 @@ main .parte2{
   color: rgb(254, 119, 90);
 }
 
+/* parte terza */
 .pt3-container{
   width: 100%;
-  height: 850px;
   padding: 50px 0;
 }
 
 .pt3-a, .pt3-b, .pt3-c{
   width: calc(90%/3);
-  height: auto;
   background-color: #fff;
   padding: 20px 50px;
   text-align: center;
+  box-shadow: 0px 0px 4px rgb(0,0,0,0.2);
 }
 
 .pt3-container .pt3-b{
-  margin: 0 73px;
+  margin: 0 70px;
 }
 
-.pt3-a .mini-box{
+.mini-box{
   width: 100%;
-  height: 100%;
   text-align: center;
 }
 
@@ -392,7 +415,8 @@ main .main-ter{
 }
 
 .main-ter .pubblicity img{
-  height: 27px;
+  height: 40px;
+  width: 150px;
   padding: 0 10px;
 }
 
@@ -421,6 +445,70 @@ main .main-ter{
 }
 
 .help .girl img{
-  width: 450px;
+  width: 400px;
 }
 
+/* footer */
+footer{
+  width: 100%;
+  padding: 60px 0;
+  background-color: rgb(50, 73, 91);
+  color: #fff;
+}
+
+footer .pages .menu{
+ width: calc(100%/4);
+ line-height: 40px;
+ font-size: 1.2em;
+}
+
+.pages .menu h3{
+  padding-bottom: 20px;
+}
+
+.pages .menu .btn{
+  background-color: #fff;
+  color:  rgb(50, 73, 91);
+  font-size: 0.7em;
+}
+
+.pages .menu ul{
+  list-style: none;
+  padding-top: 10px;
+}
+
+.pages .menu ul li{
+  display: inline;
+  padding-right: 20px;
+}
+
+/* lingue */
+
+footer .languages{
+  width: 100%;
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer .languages ul{
+  list-style: none;  
+}
+
+footer .languages ul li{
+  display: inline;
+}
+
+footer li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .titolidicoda{
+  padding: 30px;
+}
+
+.titolidicoda .document{
+  text-align: right;
+}
